@@ -1,0 +1,84 @@
+.featured{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(199, 226, 227);
+    color: rgb(3, 75, 101);
+    .container{
+        width: 1400px;
+        display: flex;
+        align-items: center;
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h1{
+                font-size:  50px;
+                font-weight: bold;
+            }
+            .search{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 5px;
+                border-radius: 20px;
+
+
+                .searchInput{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        margin: 10px;
+                    }
+                    input{
+                        border: none;
+                        outline: none;
+
+                    }
+
+                }
+                button{
+                    width: 120px;
+                    height: 50px;
+                    border: none;
+                    background-color: #3d6f9a;
+                    color: white;
+                    border-radius: 20px;
+                    cursor: pointer;
+
+                }
+            }
+            .popular{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span{}
+                button{
+                    color: rgb(3, 75, 101);
+                    background-color: transparent;
+                    border: 1px solid rgb(49, 120, 196);
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    font-size: 15px;
+                    cursor: pointer;
+
+
+                }
+            }
+
+        }
+        .right{
+            img{
+                height: 100%;
+                width: 500px;
+                object-fit: cover;
+            }
+        }
+    }
+}
