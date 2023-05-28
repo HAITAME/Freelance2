@@ -62,10 +62,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Gigs.scss";
 import GigCard from "../../components/gigCard/GigCard";
-import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import { useLocation } from "react-router-dom";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query';
 
+const queryClient = new QueryClient();
 function Gigs() {
   const [sort, setSort] = useState("sales");
   const [open, setOpen] = useState(false);
@@ -102,6 +107,8 @@ function Gigs() {
   };
 
   return (
+    <QueryClientProvider client={queryClient}>
+
     <div className="gigs">
       <div className="container">
         <span className="breadcrumbs">FreeLance {'>'} Graphics & Design {'>'}</span>
@@ -144,6 +151,7 @@ function Gigs() {
         </div>
       </div>
     </div>
+    </QueryClientProvider>
   );
 }
 

@@ -1,8 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import newRequest from "../../utils/newRequest";
 import "./Review.scss";
-const Review = ({ review }) => {
+import { useQuery } from "@tanstack/react-query";
+import newRequest from "../../utils/newRequest";
+const Review = ({review}) => {
   const { isLoading, error, data } = useQuery(
     {
       queryKey: [review.userId],
