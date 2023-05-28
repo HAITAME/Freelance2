@@ -21,13 +21,13 @@ const Home = () => {
             <div className="item">
               <h1>Unlock Success: Why Clients Trust Us for Exceptional Freelance Solutions</h1> 
               <div className="title">
-                <img src="/img/check.png" alt="check" />
+                <img src="src/public/img/check.png" alt="check" />
                 Transparent Pricing, No Surprises
               </div>  
               <p>Enjoy transparent pricing and clear breakdowns, ensuring you have full control over your budget.</p>
 
                  <div className="title">
-                      <img src="/img/check.png" alt="check" />
+                      <img src="src/public/img/check.png" alt="check" />
                       Secure Platform, Peace of Mind
                  </div>  
                  <p>Rest assured knowing your transactions and data are secure with our robust platform and privacy measures.
@@ -35,14 +35,14 @@ const Home = () => {
                  </p>
 
               <div className="title">
-                <img src="/img/check.png" alt="check" />
+                <img src="src/public/img/check.png" alt="check" />
                 Prompt and Reliable Support
               </div>  
               <p>Benefit from responsive and reliable support from our team, available to assist you every step of the way. </p>
               
               
               <div className="title">
-                <img src="/img/check.png" alt="check" />
+                <img src="src/public/img/check.png" alt="check" />
                 Expert Freelancers at Your Fingertips
               </div>  
               <p>Access a pool of expert freelancers with diverse skill sets, ready to bring your projects to life. </p>
@@ -50,7 +50,7 @@ const Home = () => {
             </div>
             <div className="item">
                 <div className="why">
-                    <img src="/img/why(2).jpg" alt="why us" />
+                    <img src="src/public/img/why(2).jpg" alt="why us" />
                 </div>
             </div>
           </div>

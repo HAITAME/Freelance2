@@ -17,7 +17,6 @@ export const createGig = async (req, res, next) => {
     res.status(201).json(savedGig);
   } catch (err) {
     next(err);
-   
   }
 };
 export const deleteGig = async (req, res, next) => {
