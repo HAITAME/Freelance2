@@ -292,6 +292,8 @@ import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import Reviews from "../../components/reviews/Reviews";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 function Gig() {
   const { id } = useParams();
@@ -339,7 +341,7 @@ function Gig() {
               "Something went wrong!"
             ) : (
               <div className="user">
-                <img
+                <LazyLoadImage
                   className="pp"
                   src={dataUser.img || "/img/noavatar.jpg"}
                   alt=""
@@ -350,7 +352,7 @@ function Gig() {
                     {Array(Math.round(data.totalStars / data.starNumber))
                       .fill()
                       .map((item, i) => (
-                        <img src="/img/star.png" alt="" key={i} />
+                        <LazyLoadImage src="/img/star.png" alt="" key={i} />
                       ))}
                     <span>{Math.round(data.totalStars / data.starNumber)}</span>
                   </div>
@@ -359,7 +361,7 @@ function Gig() {
             )}
             <Slider slidesToShow={1} arrowsScroll={1} className="slider">
               {data.images.map((img) => (
-                <img key={img} src={img} alt="" />
+                <LazyLoadImage key={img} src={img} alt="" />
               ))}
             </Slider>
             <h2>About This Gig</h2>
@@ -372,7 +374,7 @@ function Gig() {
               <div className="seller">
                 <h2>About The Seller</h2>
                 <div className="user">
-                  <img src={dataUser.img || "/img/noavatar.jpg"} alt="" />
+                  <LazyLoadImage src={dataUser.img || "/img/noavatar.jpg"} alt="" />
                   <div className="info">
                     <span>{dataUser.username}</span>
                     {!isNaN(data.totalStars / data.starNumber) && (
@@ -380,7 +382,7 @@ function Gig() {
                         {Array(Math.round(data.totalStars / data.starNumber))
                           .fill()
                           .map((item, i) => (
-                            <img src="/img/star.png" alt="" key={i} />
+                            <LazyLoadImage src="/img/star.png" alt="" key={i} />
                           ))}
                         <span>
                           {Math.round(data.totalStars / data.starNumber)}
@@ -428,18 +430,18 @@ function Gig() {
             <p>{data.shortDesc}</p>
             <div className="details">
               <div className="item">
-                <img src="/img/clock.png" alt="" />
+                <LazyLoadImage src="/img/clock.png" alt="" />
                 <span>{data.deliveryDate} Days Delivery</span>
               </div>
               <div className="item">
-                <img src="/img/recycle.png" alt="" />
+                <LazyLoadImage src="/img/recycle.png" alt="" />
                 <span>{data.revisionNumber} Revisions</span>
               </div>
             </div>
             <div className="features">
               {data.features.map((feature) => (
                 <div className="item" key={feature}>
-                  <img src="/img/greencheck.png" alt="" />
+                  <LazyLoadImage src="/img/greencheck.png" alt="" />
                   <span>{feature}</span>
                 </div>
               ))}

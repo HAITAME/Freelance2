@@ -69,6 +69,10 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query';
+import { useParams } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+
 
 const queryClient = new QueryClient();
 function Gigs() {
@@ -78,6 +82,8 @@ function Gigs() {
   const maxRef = useRef();
 
   const { search } = useLocation();
+  const { category } = useParams();
+
 
   const { isLoading, error, data, refetch } = useQuery({
     queryKey: ["gigs"],
@@ -111,10 +117,10 @@ function Gigs() {
 
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">FreeLance {'>'} Graphics & Design {'>'}</span>
-        <h1>AI Artists</h1>
+        <span className="breadcrumbs">FreeLance {'>'} {category}{'>'}</span>
+        <h1>{category}</h1>
+
         <p>
-          Explore the boundaries of art and technology with FreeLance's AI artists
         </p>
         <div className="menu">
           <div className="left">
@@ -128,7 +134,7 @@ function Gigs() {
             <span className="sortType">
               {sort === "sales" ? "Best Selling" : "Newest"}
             </span>
-            <img src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
+            <LazyLoadImage src="./img/down.png" alt="" onClick={() => setOpen(!open)} />
             {open && (
               <div className="rightMenu">
                 {sort === "sales" ? (

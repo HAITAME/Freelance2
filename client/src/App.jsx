@@ -1,5 +1,5 @@
 import "./app.scss";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider, Route } from "react-router-dom";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -17,8 +17,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-// import Pay from "./pages/pay/Pay";
-// import Success from "./pages/success/Success";
+import Pay from "./pages/pay/Pay";
+import Success from "./pages/success/Success";
+
 function App() {
   const queryClient = new QueryClient();
 
@@ -46,6 +47,10 @@ function App() {
         {
           path: "/gigs",
           element: <Gigs />,
+        },
+        {
+          path: "/gigs/:category", 
+          element: <Gigs />, 
         },
         {
           path: "/myGigs",
@@ -79,19 +84,23 @@ function App() {
           path: "/login",
           element: <Login />,
         },
-        // {
-        //   path: "/pay/:id",
-        //   element: <Pay />,
-        // },
-        // {
-        //   path: "/success",
-        //   element: <Success />,
-        // },
+        {
+          path: "/pay/:id",
+          element: <Pay />,
+        },
+        {
+          path: "/success",
+          element: <Success />,
+        },
       ],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router}>
+      <Route path="/gigs/:category" element={<Gigs />} />
+    </RouterProvider>
+  );
 }
 
 export default App;

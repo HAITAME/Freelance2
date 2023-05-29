@@ -127,6 +127,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Orders.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 const Orders = () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -178,17 +180,17 @@ const Orders = () => {
             {data.map((order) => (
               <tr key={order._id}>
                 <td>
-                  <img className="image" src={order.img} alt="" />
+                  <LazyLoadImage className="image" src={order.img} alt="" />
                 </td>
                 <td>{order.title}</td>
                 <td>{order.price}</td>
                 <td>
-                  <img
+                 <Link to={"/message/${res.data.id}"}> <img
                     className="message"
                     src="./img/message.png"
                     alt=""
                     onClick={() => handleContact(order)}
-                  />
+                  /></Link>
                 </td>
               </tr>
             ))}

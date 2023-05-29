@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
 
+
 const OrderSchema = new Schema(
   {
     gigId: {
@@ -33,12 +34,16 @@ const OrderSchema = new Schema(
     },
     payment_intent: {
       type: String,
+      default:"temporary",
       required: true,
+
     },
   },
   {
     timestamps: true,
   }
 );
+  
+ 
 
 export default mongoose.model("Order", OrderSchema);

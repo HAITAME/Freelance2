@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import newRequest from "../../utils/newRequest";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 // import { navigate } from "react-router-dom";
@@ -62,13 +63,13 @@ const Navbar = () => {
                 <span className='dot'>.</span>
             </div>
             <div className="links">
-                <span>Explore</span>
+                {/* <span>Explore</span> */}
                 {!currentUser && ( <Link className='link' to="/login"><span>Sign in</span> </Link>)}
-                {!currentUser?.isSeller &&<span>Become a Seller</span>}
+                {/* {!currentUser?.isSeller &&<span>Become a Seller</span>} */}
                 {!currentUser && ( <Link className='link' to="/register"> <button>Sign up</button> </Link>)}
                 {currentUser &&(
                    <div className="user" onClick={()=>setOpen(!open)}>
-                       <img 
+                       <LazyLoadImage 
                        src={ currentUser.img   || "/img/ICON.jpg"} 
                        alt="" 
                        />
@@ -97,10 +98,10 @@ const Navbar = () => {
           <>
           <hr/>
           <div className="menu">
-                <span>Programming & Tech</span> 
-                <span>Graphics & Design</span>
-                <span>Digital Marketing</span>
-                <span>Writing & Translation</span>
+          <Link className='link' to="/gigs?cat=design"> <span>Design</span> </Link>
+          <Link className='link' to="/gigs?cat=web">     <span>Web development</span></Link>
+          <Link className='link' to="/gigs?cat=animation">     <span>Animation</span></Link>
+          <Link className='link' to="/gigs?cat=music">     <span>Music</span></Link>
 
           </div>
           </>

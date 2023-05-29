@@ -3,6 +3,8 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import "./Message.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 const Message = () => {
   const { id } = useParams();
@@ -40,7 +42,7 @@ const Message = () => {
     <div className="message">
       <div className="container">
         <span className="breadcrumbs">
-          <Link to="/messages">Messages</Link> > John Doe >
+          <Link to="/messages">Messages</Link> {">"} John Doe {">"}
         </span>
         {isLoading ? (
           "loading"
@@ -50,7 +52,7 @@ const Message = () => {
           <div className="messages">
             {data.map((m) => (
               <div className={m.userId === currentUser._id ? "owner item" : "item"} key={m._id}>
-                <img
+                <LazyLoadImage
                   src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt=""
                 />

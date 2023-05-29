@@ -2,6 +2,8 @@ import React from "react";
 import "./Review.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const Review = ({review}) => {
   const { isLoading, error, data } = useQuery(
     {
@@ -22,7 +24,7 @@ const Review = ({review}) => {
         "error"
       ) : (
         <div className="user">
-          <img className="pp" src={data.img || "/img/noavatar.jpg"} alt="" />
+          <LazyLoadImage className="pp" src={data.img || "/img/noavatar.jpg"} alt="" />
           <div className="info">
             <span>{data.username}</span>
             <div className="country">
@@ -35,16 +37,16 @@ const Review = ({review}) => {
         {Array(review.star)
           .fill()
           .map((item, i) => (
-            <img src="/img/star.png" alt="" key={i} />
+            <LazyLoadImage src="/img/star.png" alt="" key={i} />
           ))}
         <span>{review.star}</span>
       </div>
       <p>{review.desc}</p>
       <div className="helpful">
         <span>Helpful?</span>
-        <img src="/img/like.png" alt="" />
+        <LazyLoadImage src="/img/like.png" alt="" />
         <span>Yes</span>
-        <img src="/img/dislike.png" alt="" />
+        <LazyLoadImage src="/img/dislike.png" alt="" />
         <span>No</span>
       </div>
     </div>
