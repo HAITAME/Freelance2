@@ -121,14 +121,12 @@
 
 // export default Orders;
 
-
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Orders.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
 
 const Orders = () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -159,41 +157,48 @@ const Orders = () => {
       }
     }
   };
+
   return (
     <div className="orders">
       {isLoading ? (
-        "loading"
+        "Loading..."
       ) : error ? (
-        "error"
+        "Error loading orders"
       ) : (
         <div className="container">
           <div className="title">
             <h1>Orders</h1>
           </div>
           <table>
-            <tr>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Contact</th>
-            </tr>
-            {data.map((order) => (
-              <tr key={order._id}>
-                <td>
-                  <LazyLoadImage className="image" src={order.img} alt="" />
-                </td>
-                <td>{order.title}</td>
-                <td>{order.price}</td>
-                <td>
-                 <Link to={"/message/${res.data.id}"}> <img
-                    className="message"
-                    src="./img/message.png"
-                    alt=""
-                    onClick={() => handleContact(order)}
-                  /></Link>
-                </td>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Contact</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {data.map((order) => (
+                <tr key={order._id}>
+                  <td>
+                    <LazyLoadImage className="image" src={order.img} alt="" />
+                  </td>
+                  <td>{order.title}</td>
+                  <td>{order.price}</td>
+                  <td>
+                    <Link to={`/message/${order.id}`}>
+                      <img
+                        className="message"
+                        src="/img/message.png"
+                        alt=""
+                        onClick={() => handleContact(order)}
+                      />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       )}

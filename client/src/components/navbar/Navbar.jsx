@@ -63,7 +63,7 @@ const Navbar = () => {
                 <span className='dot'>.</span>
             </div>
             <div className="links">
-                {/* <span>Explore</span> */}
+                <Link className='link' to="/gigs?cat"> <span>Explore</span>   </Link>
                 {!currentUser && ( <Link className='link' to="/login"><span>Sign in</span> </Link>)}
                 {/* {!currentUser?.isSeller &&<span>Become a Seller</span>} */}
                 {!currentUser && ( <Link className='link' to="/register"> <button>Sign up</button> </Link>)}

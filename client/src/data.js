@@ -4,35 +4,35 @@ export const cards = [
     cat: "design",
     title: "AI Artists",
     desc: "Add talent to AI",
-    img: "https://images.pexels.com/photos/7532110/pexels-photo-7532110.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/8438982/pexels-photo-8438982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 2,
-    cat: "design",
+    cat: "Logo",
     title: "Logo Design",
     desc: "Build yor brand",
-    img: "https://images.pexels.com/photos/11295165/pexels-photo-11295165.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/791942/pexels-photo-791942.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {
     id: 3,
     cat: "web",
     title: "Web Development",
     desc: "Customize your site",
-    img: "https://images.pexels.com/photos/4371669/pexels-photo-4371669.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 4,
     cat: "music",
     title: "Music",
     desc: "Share your Music",
-    img: "https://images.pexels.com/photos/7608079/pexels-photo-7608079.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/3693108/pexels-photo-3693108.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {
     id: 5,
     cat: "design",
     title: "Graphic Design",
     desc: "Build your brand",
-    img: "https://images.pexels.com/photos/11295165/pexels-photo-11295165.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+    img:"https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
   {
     id: 6,
@@ -46,14 +46,14 @@ export const cards = [
     cat: "business",
     title: "SEO",
     desc: "Unlock growth online",
-    img: "https://images.pexels.com/photos/4820241/pexels-photo-4820241.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/907607/pexels-photo-907607.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 8,
     cat: "animation",
     title: "Illustration",
     desc: "Color you dreams",
-    img: "https://images.pexels.com/photos/15032623/pexels-photo-15032623.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.pexels.com/photos/10707391/pexels-photo-10707391.jpeg",
   },
 ];
 

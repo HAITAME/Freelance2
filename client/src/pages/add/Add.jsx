@@ -84,7 +84,7 @@ const Add = () => {
               <option value="web">Web Development</option>
               <option value="animation">Animation</option>
               <option value="music">Music</option>
-              <option value="marketing">Marketing</option>
+              <option value="Logo">Logo design</option>
               <option value="writing">Writing</option>
               <option value="video">Video Editing</option>
               <option value="programming">Programming</option>
