@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Pay.scss";
+import "./pay.scss";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import newRequest from "../../utils/newRequest";
@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import CheckoutForm from "../../components/checkoutForm/CheckoutForm";
 
 const stripePromise = loadStripe(
-  "paste your public key"
+  "pk_test_51NChwzKSQ3HKQ2Jab4jjfFtFNd0JkhKZ9UyMwz1wVhYMifjz7eaiqcFg0jEBh2tkFL2796Q0hcqwfNOf22K3deZF002tZeXSgy"
 );
 
 const Pay = () => {

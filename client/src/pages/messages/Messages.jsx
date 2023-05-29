@@ -43,12 +43,15 @@ const Messages = () => {
             <h1>Messages</h1>
           </div>
           <table>
+            <thead>
             <tr>
               <th>{currentUser.isSeller ? "Buyer" : "Seller"}</th>
               <th>Last Message</th>
               <th>Date</th>
               <th>Action</th>
             </tr>
+            </thead>
+            <tbody>
             {data.map((c) => (
               <tr
                 className={
@@ -75,6 +78,7 @@ const Messages = () => {
                 </td>
               </tr>
             ))}
+            </tbody>
           </table>
         </div>
       )}

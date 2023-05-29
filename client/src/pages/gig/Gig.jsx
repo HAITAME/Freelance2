@@ -332,7 +332,7 @@ function Gig() {
         <div className="container">
           <div className="left">
             <span className="breadcrumbs">
-              Fiverr {">"} Graphics & Design {">"}
+              FreeLance   {">"}  {data.cat}  {">"}
             </span>
             <h1>{data.title}</h1>
             {isLoadingUser ? (
@@ -389,7 +389,11 @@ function Gig() {
                         </span>
                       </div>
                     )}
-                    <button>Contact Me</button>
+
+                  {/* //? Contact button ?// */}
+                  <Link to={`/message/${dataUser.id}`} className="link">
+                            <button>Contact Me</button>
+                  </Link> 
                   </div>
                 </div>
                 <div className="box">

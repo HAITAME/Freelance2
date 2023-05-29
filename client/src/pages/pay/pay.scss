@@ -1,3 +1,37 @@
-.pay{
-
-}
+.pay {
+    // Styles spécifiques à la composante Pay
+  
+    .container {
+      // Styles du container
+    }
+  
+    .checkout-form {
+      // Styles du formulaire de paiement
+  
+      input {
+        // Styles des champs de saisie
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+  
+      button {
+        // Styles du bouton de paiement
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+  
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+  }
+  

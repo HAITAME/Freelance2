@@ -69,7 +69,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query';
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
@@ -82,7 +82,7 @@ function Gigs() {
   const maxRef = useRef();
 
   const { search } = useLocation();
-  const { category } = useParams();
+  const category = search.split("=")[1];
 
 
   const { isLoading, error, data, refetch } = useQuery({
@@ -96,8 +96,8 @@ function Gigs() {
           return res.data;
         }),
   });
-
-  console.log(data);
+  
+  // console.log(data);
 
   const reSort = (type) => {
     setSort(type);
@@ -120,8 +120,8 @@ function Gigs() {
         <span className="breadcrumbs">FreeLance {'>'} {category}{'>'}</span>
         <h1>{category}</h1>
 
-        <p>
-        </p>
+        <br/>
+
         <div className="menu">
           <div className="left">
             <span>Budget</span>
@@ -147,6 +147,7 @@ function Gigs() {
             )}
           </div>
         </div>
+       <hr/>
         <div className="cards">
           {isLoading
             ? "loading"
