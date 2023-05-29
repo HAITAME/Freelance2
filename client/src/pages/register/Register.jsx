@@ -174,14 +174,14 @@ function Register() {
           <input
             name="username"
             type="text"
-            placeholder="johndoe"
+            placeholder="Username"
             onChange={handleChange}
           />
           <label htmlFor="">Email</label>
           <input
             name="email"
             type="email"
-            placeholder="email"
+            placeholder="email@.com"
             onChange={handleChange}
           />
           <label htmlFor="">Password</label>

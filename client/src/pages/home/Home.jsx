@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <div className='home'>
       <Featured />
-      {/* <Slide slidesToShow={5} arrowsScroll={5}>
+      <Slide slidesToShow={4} arrowsScroll={5}>
       {cards.map(card=>(
         <CatCard key={card.id} item={card} />
       ))}
-      </Slide> */}
+      </Slide> 
         <div className="features">
           <div className="container">
             <div className="item">
@@ -60,11 +60,11 @@ const Home = () => {
       {/* need to add something else  */}
 
 
-      {/* <Slide slidesToShow={4} arrowsScroll={4}>
+      <Slide slidesToShow={4} arrowsScroll={4}>
       {projects.map((card)=>(
         <ProjectCard key={card.id} item={card} />
       ))}
-      </Slide> */}
+      </Slide>
     </div>
   )
 }

@@ -8,6 +8,8 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className="container">
+      <hr />
+
         <div className="top">
           <div className="item">
             <h2>Categories</h2>
