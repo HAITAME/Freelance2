@@ -98,10 +98,10 @@ const Navbar = () => {
           <>
           <hr/>
           <div className="menu">
-          <Link className='link' to="/gigs?cat=design"> <span>Design</span> </Link>
-          <Link className='link' to="/gigs?cat=web">     <span>Web development</span></Link>
-          <Link className='link' to="/gigs?cat=animation">     <span>Animation</span></Link>
-          <Link className='link' to="/gigs?cat=music">     <span>Music</span></Link>
+          <a href="http://localhost:5173/gigs?cat=design" className='link'> <span>Design</span> </a>
+          <a href="http://localhost:5173/gigs?cat=web" className='link'>  <span>Web development</span></a>
+          <a href="http://localhost:5173/gigs?cat=animation" className='link'> <span>Animation</span></a> 
+          <a href="http://localhost:5173/gigs?cat=music" className='link'> <span>Music</span></a>
 
           </div>
           </>

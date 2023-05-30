@@ -187,7 +187,7 @@ const Orders = () => {
                   <td>{order.title}</td>
                   <td>{order.price}</td>
                   <td>
-                    <Link to={`/message/${order.id}`}>
+                    <Link to={`/message/${order.sellerId}`}>
                       <img
                         className="message"
                         src="/img/message.png"

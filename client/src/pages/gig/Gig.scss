@@ -1,9 +1,11 @@
 .gig {
+  width: 100%;
     display: flex;
     justify-content: center;
   
     .container {
-      width: 1400px;
+      width: 100%;
+      max-width: 1400px;
       padding: 30px 0px;
       display: flex;
       gap: 50px;
@@ -63,7 +65,8 @@
           background-color: #F5F5F5;
           img {
             max-height: 500px;
-            object-fit: contain;
+          object-fit: contain;
+          width: 100%;
           }
         }
   
@@ -308,4 +311,30 @@
         }
       }
     }
+    @media screen and (max-width: 1400px) {
+      .gig {
+        .container {
+          justify-content: center;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .gig {
+        .container {
+          .left {
+            flex: 1;
+          }
+  
+          .right {
+            flex: 1;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
   }
+ 
+
+
+  

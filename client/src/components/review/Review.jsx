@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import "./Review.scss";
 import { useQuery } from "@tanstack/react-query";

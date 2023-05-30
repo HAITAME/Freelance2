@@ -24,7 +24,7 @@
 
   .container {
     width: 100%;
-    width: 1400px;
+    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +48,7 @@
       gap: 24px;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
+      
 
       span {
         white-space: nowrap;

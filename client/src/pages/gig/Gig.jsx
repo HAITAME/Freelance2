@@ -308,6 +308,7 @@ function Gig() {
   });
 
   const userId = data?.userId;
+  console.log(userId);
 
   const {
     isLoading: isLoadingUser,
@@ -391,7 +392,8 @@ function Gig() {
                     )}
 
                   {/* //? Contact button ?// */}
-                  <Link to={`/message/${dataUser.id}`} className="link">
+                   
+                  <Link to={`/message/${userId}`} className="link">
                             <button>Contact Me</button>
                   </Link> 
                   </div>

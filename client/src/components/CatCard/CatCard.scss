@@ -14,8 +14,17 @@
     .desc{
         font-weight: 300;
         position: absolute;
-        top: 145px;
+        // top: 145px;
+        top: 50%;
         left: 15px;
+        transform: translateY(-50%);
+        // background-color: rgb(85, 77, 66);
+        color: antiquewhite;
+        font-size: 18px;
+        font-weight: 450;
+        text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+
+
 
     }
 
@@ -25,7 +34,18 @@
         position: absolute;
         left: 15px;
         top: 40px;
+        transform: translateX(40%);
+        color: rgb(242, 247, 248);
+        // background-color: rgba(54, 54, 54, 0.31);
+        text-shadow: rgb(0, 0, 0) 2px 2px 2px;
     }
-
+    @media screen and (max-width: 768px) {
+        .catCard {
+          width: 100%; /* Occupe 100% de la largeur sur les petits écrans */
+          max-width: none; /* Supprimez la limite de largeur */
+          height: auto; /* Permet à la hauteur de s'ajuster en fonction du contenu */
+          margin-bottom: 20px; /* Ajoutez une marge inférieure pour créer un espacement entre les cartes */
+        }
+      }
       
 }
