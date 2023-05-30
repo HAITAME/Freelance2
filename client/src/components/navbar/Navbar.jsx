@@ -50,6 +50,10 @@ const Navbar = () => {
          console.log(err);
     }
   }
+  // const navigTo = ()=>
+  // {
+  //   history.push("/profile");
+  //   }
 
 
   return (
@@ -68,13 +72,15 @@ const Navbar = () => {
                 {/* {!currentUser?.isSeller &&<span>Become a Seller</span>} */}
                 {!currentUser && ( <Link className='link' to="/register"> <button>Sign up</button> </Link>)}
                 {currentUser &&(
-                   <div className="user" onClick={()=>setOpen(!open)}>
+                   <div className="user" onClick={()=>setOpen(!open)} >
                        <LazyLoadImage 
                        src={ currentUser.img   || "/img/ICON.jpg"} 
                        alt="" 
                        />
                        <span>{currentUser?.username }</span>
                        {open &&<div className="options">
+                       <Link className='link' to="/profile">Profil</Link>
+
                         { currentUser?.isSeller &&(
                             <>
                             <Link className='link' to="/mygigs"> Gigs</Link>

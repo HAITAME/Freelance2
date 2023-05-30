@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useReducer, useState } from "react";
 import "./Add.scss";
 import { gigReducer, INITIAL_STATE } from "../../reducers/gigReducer";
@@ -62,7 +63,7 @@ const Add = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     mutation.mutate(state);
-    // navigate("/mygigs")
+     navigate("/gigs?cat")
   };
 
   return (
@@ -85,7 +86,7 @@ const Add = () => {
               <option value="animation">Animation</option>
               <option value="music">Music</option>
               <option value="Logo">Logo design</option>
-              <option value="writing">Writing</option>
+              {/* <option value="writing">Writing</option> */}
               <option value="video">Video Editing</option>
               <option value="programming">Programming</option>
               <option value="business">Business</option>
@@ -160,7 +161,7 @@ const Add = () => {
                     }
                   >
                     {f}
-                    <span>X</span>
+                    <span> ×</span>
                   </button>
                 </div>
               ))}
