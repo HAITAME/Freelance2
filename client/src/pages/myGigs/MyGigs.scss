@@ -34,9 +34,15 @@
         tr {
           height: 50px;
           th {
-            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-weight: 500;
+            font-size: 30px;
+           
+            text-align: center;
           }
           td {
+            text-align: center;
   
             sup{
               font-size: 12px;

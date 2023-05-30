@@ -169,6 +169,7 @@ const Orders = () => {
           <div className="title">
             <h1>Orders</h1>
           </div>
+          <br/>
           <table>
             <thead>
               <tr>
@@ -190,7 +191,7 @@ const Orders = () => {
                     <Link to={`/message/${order.sellerId}`}>
                       <img
                         className="message"
-                        src="/img/message.png"
+                        src="/img/mssgs.png"
                         alt=""
                         onClick={() => handleContact(order)}
                       />

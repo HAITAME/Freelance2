@@ -13,8 +13,12 @@ function MyGigs() {
   const queryClient = useQueryClient();
 
   const { isLoading, error, data } = useQuery(["myGigs"], () =>
-    newRequest.get(`/gigs?userId=${currentUser.id}`).then((res) => res.data)
+    newRequest.get(`/gigs?userId=${currentUser._id}`).then((res) => res.data)
   );
+
+  console.log(currentUser._id);
+  console.log(currentUser.username);
+  console.log(data);
 
   const mutation = useMutation((id) => newRequest.delete(`/gigs/${id}`), {
     onSuccess: () => {
@@ -36,12 +40,14 @@ function MyGigs() {
         <div className="container">
           <div className="title">
             <h1>Gigs</h1>
+
             {currentUser.isSeller && (
               <Link to="/add">
                 <button>Add New Gig</button>
               </Link>
             )}
           </div>
+          <br/>
           <table>
             <tbody>
               <tr>
@@ -62,7 +68,7 @@ function MyGigs() {
                   <td>
                     <LazyLoadImage
                       className="delete"
-                      src="./img/delete.png"
+                      src="./img/dell.png"
                       alt=""
                       onClick={() => handleDelete(gig._id)}
                     />

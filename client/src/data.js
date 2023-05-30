@@ -10,7 +10,7 @@ export const cards = [
     id: 2,
     cat: "Logo",
     title: "Logo Design",
-    desc: "Build yor brand",
+    desc: "Build your brand",
     img: "https://images.pexels.com/photos/791942/pexels-photo-791942.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {

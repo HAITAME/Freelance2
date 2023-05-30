@@ -83,11 +83,11 @@ const Navbar = () => {
 
                         { currentUser?.isSeller &&(
                             <>
-                            <Link className='link' to="/mygigs"> Gigs</Link>
+                            <Link className='link' to="/mygigs">My Gigs</Link>
                             <Link className='link' to="/add">Add New Gig</Link>
                             </>
                           )}
-                        <Link className='link' to="/orders">Orders</Link>
+                        <Link className='link' to="/orders">My Orders</Link>
                         <Link className='link' to="/messages">Messages</Link>
                         <Link className='link' onClick={handleLogout} to="/">LogOut</Link>
 
