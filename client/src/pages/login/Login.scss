@@ -33,7 +33,13 @@
         font-weight: 500;
         font-size: 18px;
         background-color: #1d28bf;
+        border-radius: 20px;
         cursor: pointer;
+        &:hover{
+          background-color: #b2e4e7;
+          color: rgb(2, 48, 79);
+          border: rgb(27, 131, 200);
+          }
       }
   
       span{

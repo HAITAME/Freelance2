@@ -39,7 +39,7 @@ function MyGigs() {
       ) : (
         <div className="container">
           <div className="title">
-            <h1>Gigs</h1>
+            <h1>My Gigs</h1>
 
             {currentUser.isSeller && (
               <Link to="/add">

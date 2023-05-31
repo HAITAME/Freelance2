@@ -160,7 +160,7 @@ function Register() {
         // img:"images !!!"
         img: url,
       });
-      navigate("/")
+      navigate("/login")
     } catch (err) {
       console.log(err);
     }
