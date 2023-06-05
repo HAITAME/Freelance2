@@ -64,7 +64,7 @@ const Navbar = () => {
                 <Link to="/" className='link'>               
                    <span className='text'>FreeLance</span>
                 </Link>
-                <span className='dot'> ✩</span>
+                <span className='star'> ✩</span>
             </div>
             <div className="links">
                 <a href="http://localhost:5173/gigs?cat" className='link'>  <span>Explore</span>   </a>
