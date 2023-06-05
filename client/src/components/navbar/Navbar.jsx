@@ -64,10 +64,10 @@ const Navbar = () => {
                 <Link to="/" className='link'>               
                    <span className='text'>FreeLance</span>
                 </Link>
-                <span className='dot'>.</span>
+                <span className='dot'> ✩</span>
             </div>
             <div className="links">
-                <Link className='link' to="/gigs?cat"> <span>Explore</span>   </Link>
+                <a href="http://localhost:5173/gigs?cat" className='link'>  <span>Explore</span>   </a>
                 {!currentUser && ( <Link className='link' to="/login"><span>Sign in</span> </Link>)}
                 {/* {!currentUser?.isSeller &&<span>Become a Seller</span>} */}
                 {!currentUser && ( <Link className='link' to="/register"> <button>Sign up</button> </Link>)}

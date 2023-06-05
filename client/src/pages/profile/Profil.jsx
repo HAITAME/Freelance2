@@ -19,6 +19,7 @@ const Profil = () => {
   };
 
   return (
+    
     <div className="CONT">
       <br/>
       <h1>Profil</h1>

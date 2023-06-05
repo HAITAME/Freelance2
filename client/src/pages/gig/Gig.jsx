@@ -298,7 +298,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function Gig() {
   const { id } = useParams();
 
-  
+  const currentUser=JSON.parse(localStorage.getItem("currentUser"));
+
   const { isLoading, error, data } = useQuery({
     queryKey: ["gig"],
     queryFn: () =>
@@ -392,10 +393,17 @@ function Gig() {
                     )}
 
                   {/* //? Contact button ?// */}
-                   
+                  {currentUser &&( 
                   <Link to={`/message/${userId}`} className="link">
                             <button>Contact Me</button>
                   </Link> 
+                    )}
+
+                  {!currentUser &&( 
+                  <Link to={`/login`} className="link">
+                            <button>Login to contact seller</button>
+                  </Link> 
+                    )}
                   </div>
                 </div>
                 <div className="box">
@@ -452,9 +460,18 @@ function Gig() {
                 </div>
               ))}
             </div>
+            {currentUser &&(
             <Link to={`/pay/${id}`}>
             <button>Continue</button>
             </Link>
+            )}
+            {!currentUser &&( 
+                  <Link to={`/login`} className="link">
+                            <button>Login to Continue</button>
+                  </Link> 
+                    
+                    
+            )}
           </div>
         </div>
       )}

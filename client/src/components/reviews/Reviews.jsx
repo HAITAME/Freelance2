@@ -3,7 +3,9 @@ import React from "react";
 import newRequest from "../../utils/newRequest";
 import Review from "../review/Review";
 import "./Reviews.scss";
+import { Link } from "react-router-dom";
 const Reviews = ({ gigId }) => {
+  const currentUser=JSON.parse(localStorage.getItem("currentUser"));
 
   const queryClient = useQueryClient()
   const { isLoading, error, data } = useQuery({
@@ -39,18 +41,32 @@ const Reviews = ({ gigId }) => {
         ? "Something went wrong!"
         : data.map((review) => <Review key={review._id} review={review} />)}
       <div className="add">
+      {!currentUser?.isSeller &&(
         <h3>Add a review</h3>
-        <form action="" className="addForm" onSubmit={handleSubmit}>
-          <input type="text" placeholder="write your opinion" />
-          <select name="" id="">
-            <option value={1}>1 : ⭐</option>
-            <option value={2}>2 : ⭐⭐</option>
-            <option value={3}>3 : ⭐⭐⭐</option>
-            <option value={4}>4 : ⭐⭐⭐⭐</option>
-            <option value={5}>5 : ⭐⭐⭐⭐⭐</option>
-          </select>
-          <button>Send</button>
-        </form>
+      )}
+        {!currentUser &&(
+          <Link to="/login">
+            <button className="Button2">Login to add reviews</button>
+          </Link>
+        )}
+        {currentUser &&(
+          <>
+          {!currentUser?.isSeller &&(
+                <form action="" className="addForm" onSubmit={handleSubmit}>
+                  <input type="text" placeholder="write your opinion" />
+                  <select name="" id="">
+                    <option value={1}>1 : ⭐</option>
+                    <option value={2}>2 : ⭐⭐</option>
+                    <option value={3}>3 : ⭐⭐⭐</option>
+                    <option value={4}>4 : ⭐⭐⭐⭐</option>
+                    <option value={5}>5 : ⭐⭐⭐⭐⭐</option>
+                  </select>
+                  <button>Send</button>
+                </form>
+              )}
+            </>
+        )}
+
       </div>
     </div>
   );

@@ -16,6 +16,29 @@
       font-size: 18px;
       margin-bottom: 16px;
     }
+    a{
+      .Button2 {
+        background-color: #23a3bd;
+        padding: 10px;
+        color: white;
+        font-weight: 500;
+        border: none;
+        font-size: 18px;
+        border-radius: 10px; 
+          
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover{
+          background-color: #c9dee2;
+          color: #3e73c3;
+          border: #3e73c3 ;
+          border-radius: 10px;
+          
+          
+        }
+      }
+    }
   
     .addForm {
       display: flex;
@@ -50,10 +73,11 @@
         &:hover {
           background-color: #0056b3;
         }
-      }
+      
     }
   }
   
+}
 }
 
 .review {

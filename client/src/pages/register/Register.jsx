@@ -196,6 +196,10 @@ function Register() {
             onChange={handleChange}
           />
           <button type="submit">Register</button>
+          
+          <p>
+          Already have an account? <a href="/login" className="link"> <strong> Login</strong></a>
+        </p>
         </div>
         <div className="right">
           <h1>I want to become a seller</h1>
@@ -223,7 +227,9 @@ function Register() {
             onChange={handleChange}
           ></textarea>
         </div>
+        
       </form>
+      
     </div>
   );
 }

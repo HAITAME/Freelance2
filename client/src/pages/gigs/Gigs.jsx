@@ -97,7 +97,7 @@ function Gigs() {
         }),
   });
   
-  // console.log(data);
+  console.log(data);
 
   const reSort = (type) => {
     setSort(type);
@@ -117,8 +117,8 @@ function Gigs() {
 
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">FreeLance {'>'} {category}{'>'}</span>
-        <h1>{category}</h1>
+        <span className="breadcrumbs">FreeLance {'>'} {category || "ALL "}{'>'}</span>
+        <h1>{category || "ALL "}</h1>
 
         <br/>
 

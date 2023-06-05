@@ -16,7 +16,8 @@
         flex-direction: column;
         gap: 20px;
         height: 500px;
-        overflow: scroll;
+        overflow: auto;
+        background-color: rgba($color: #ffffff0b, $alpha: 1.0);
   
         .item {
           display: flex;
@@ -68,10 +69,12 @@
   
         textarea {
           width: 80%;
-          height: 100px;
+          height: 50px;
           padding: 10px;
           border: 1px solid lightgray;
           border-radius: 10px;
+          resize: none;
+          overflow: auto;
         }
   
         button{

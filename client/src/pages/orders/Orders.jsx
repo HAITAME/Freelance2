@@ -182,8 +182,9 @@ const Orders = () => {
             <tbody>
               {data.map((order) => (
                 <tr key={order._id}>
-                  <td>
+                  <td><Link to={`/gig/${order.gigId}`} className="link">
                     <LazyLoadImage className="image" src={order.img} alt="" />
+                    </Link>
                   </td>
                   <td>{order.title}</td>
                   <td>{order.price}</td>

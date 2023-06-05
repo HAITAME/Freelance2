@@ -4,11 +4,13 @@
     // border: 1px solid rgb(237, 236, 236);
     border: 1px solid rgb(228, 228, 228);
     margin-bottom: 40px;
+    border-radius: 5px;
   
     img {
       width: 100%;
       height: 50%;
       object-fit: cover;
+      border-radius: 5px;
     }
   
     .info {

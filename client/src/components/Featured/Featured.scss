@@ -1,4 +1,5 @@
 .featured{
+    width: 100%;
     height: 600px;
     display: flex;
     justify-content: center;
@@ -29,6 +30,7 @@
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    
 
                     img{
                         width: 20px;
@@ -36,8 +38,12 @@
                         margin: 10px;
                     }
                     input{
-                        border: none;
-                        outline: none;
+                         border: none;
+                         outline: none;
+                         background-color: transparent;
+                         width: 400px;
+                            
+                        //  max-width: 800px;
 
                     }
 
@@ -58,7 +64,9 @@
                 align-items: center;
                 gap: 10px;
 
-                span{}
+                span{
+
+                }
                 button{
                     color: rgb(3, 75, 101);
                     background-color: transparent;
@@ -67,6 +75,11 @@
                     border-radius: 15px;
                     font-size: 15px;
                     cursor: pointer;
+                    &:hover{
+                        background-color: rgb(49, 120, 196);
+                        color: white;
+                        // border: none;
+                    }
 
 
                 }

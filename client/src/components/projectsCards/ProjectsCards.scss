@@ -1,0 +1,56 @@
+.projectCard {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-shadow : 2px 2px 16px rgba(0,0,0,0.59);
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.59);
+
+    border: 1px solid rgb(225, 225, 225);
+
+  
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+  
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+  
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+  
+      .texts {
+        text-align: center;
+        h2 {
+          font-size: 14px;
+          font-weight: 400;
+        }
+  
+        span {
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .projectCard {
+        width: 100%; /* Occupe 100% de la largeur sur les petits écrans */
+        max-width: none; /* Supprimez la limite de largeur */
+        height: auto; /* Permet à la hauteur de s'ajuster en fonction du contenu */
+        margin-bottom: 20px; /* Ajoutez une marge inférieure pour créer un espacement entre les cartes */
+      }
+    }
+  }

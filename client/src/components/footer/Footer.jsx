@@ -37,6 +37,9 @@ const Footer = () => {
             <div className="item">
             <h2>Community</h2>
             {/* <span>Become a Seller</span> */}
+              <a className='link' href="https://github.com/HAITAME"><span>GitHub</span></a>
+              <a className='link' href="https://github.com/BILALck4"><span>GitHub</span></a>
+              
             </div>
 
         </div>
@@ -44,8 +47,8 @@ const Footer = () => {
         <div className="bottom">
           <div className="left">
             <br />
-            <h2>Freelance.</h2>
-            <span>© 2023 Freelance .</span>
+            <h2>Freelance ✩</h2>
+            <span>© 2023 Freelance ✩</span>
           </div>
           <div className="right">
             <div className="social">

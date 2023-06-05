@@ -1,4 +1,21 @@
 *{
+    
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(73, 73, 74, 0.534); 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(166, 167, 215, 0.534); 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(89, 91, 207, 0.534);
+      }
     .link{
         text-decoration: none;
         color: inherit;
